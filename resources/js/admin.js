@@ -1,3 +1,29 @@
+var index = 0;
+var localStorage = window.localStorage;
+localStorage.setItem('nextIndex', "0")
+
+function addLeaf() {
+    var e = document.getElementById("specialistSelection");
+    var specialist = e.options[e.selectedIndex].text;
+    var name = document.getElementById("input").value;
+    var leaf = new Leaf(name, specialist);
+    window.localStorage.setItem('leaf', JSON.stringify(leaf))
+}
+
+class Leaf {
+    constructor(name, specialist) {
+        this.name = name;
+        this.specialist = specialist;
+        this.number = localStorage.getItem('nextIndex');
+        increaseIndex();
+    }
+}
+
+function increaseIndex() {
+    index++;
+    localStorage.setItem('nextIndex', index.toString())
+}
+
 function loadJSON(callback) {
 
     var xobj = new XMLHttpRequest();

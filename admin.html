@@ -33,7 +33,7 @@
                             </div>
                             <div class="siimple-field">
                                 <div class="siimple-field-label">Specialistas</div>
-                                <select class="siimple-select siimple-select--fluid">
+                                <select class="siimple-select siimple-select--fluid" id="specialistSelection">
                                     <option selected>Odontologas</option>
                                     <option>Ginekologas</option>
                                     <option>Psichologas</option>
@@ -42,10 +42,11 @@
                             </div>
                             <div class="siimple-field">
                                 <div class="siimple-field-label">Kliento Vardas</div>
-                                <input type="password" class="siimple-input siimple-input--fluid" placeholder="Jonas">
+                                <input class="siimple-input siimple-input--fluid" placeholder="Jonas" id="input">
                             </div>
                             <div class="siimple-field">
-                                <div class="siimple-btn siimple-btn--primary siimple-btn--fluid siimple--text-bold">
+                                <div class="siimple-btn siimple-btn--primary siimple-btn--fluid siimple--text-bold"
+                                    onclick="addLeaf()">
                                     Įtraukti į Eilę
                                 </div>
                             </div>
