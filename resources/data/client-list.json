@@ -1,0 +1,22 @@
+[
+    {
+        "specialist": "odontologas",
+        "name": "Marius",
+        "number": "001"
+    },
+    {
+        "specialist": "odontologas",
+        "name": "Antanas",
+        "number": "022"
+    },
+    {
+        "specialist": "psichologas",
+        "name": "Ignas",
+        "number": "333"
+    },
+    {
+        "specialist": "Pediatras",
+        "name": "Jurgis",
+        "number": "100"
+    }
+]
