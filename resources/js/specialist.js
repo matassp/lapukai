@@ -5,24 +5,21 @@ const specialists = {
     PEDIATRAS: 'pediatras'
 }
 
-class specialist {
+class Specialist {
     queue = [];
+    nextNumber = 0;
+
     constructor(name) {
-        this.name = name
+        this.name = name;
     }
 
     addLeaf(name) {
-        console.log(name)
+        this.queue.push({ name: name, number: this.nextNumber });
+        this.nextNumber++;
+        console.log(this.queue);
     }
-}
 
-switch (specialist) {
-    case specialists.ODONTOLOGAS:
-    // Do something for summer
-    case specialists.GINEKOLOGAS:
-    //Do something for winter
-    case specialists.PSICHOLOGAS:
-    //Do something for spring
-    case specialists.PEDIATRAS:
-    //Do something for autumn
+    removeFirstFromQueue() {
+        this.queue.shift();
+    }
 }
