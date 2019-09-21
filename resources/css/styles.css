@@ -1,0 +1,28 @@
+#odontologas .siimple-card-header {
+    background-color: #4e91e4;
+}
+#odontologas i {
+    color: #4e91e4;
+}
+#ginekologas .siimple-card-header {
+    background-color: #4acf7f;
+}
+#ginekologas i {
+    color: #4acf7f;
+}
+#psichologas .siimple-card-header {
+    background-color: #fbc850;
+}
+#psichologas i {
+    color: #fbc850;
+}
+#pediatras .siimple-card-header {
+    background-color: #ee675d;
+}
+#pediatras i {
+    color: #ee675d;
+}
+.siimple-btn.siimple-btn--fluid {
+    background-color: #dde5ee;
+    color: #546778;
+}
