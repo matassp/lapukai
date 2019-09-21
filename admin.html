@@ -34,10 +34,10 @@
                             <div class="siimple-field">
                                 <div class="siimple-field-label">Specialistas</div>
                                 <select class="siimple-select siimple-select--fluid" id="specialistSelection">
-                                    <option selected>Odontologas</option>
-                                    <option>Ginekologas</option>
-                                    <option>Psichologas</option>
-                                    <option>Pediatras</option>
+                                    <option selected value="odontologas">Odontologas</option>
+                                    <option value="ginekologas">Ginekologas</option>
+                                    <option value="psichologas">Psichologas</option>
+                                    <option value="pediatras">Pediatras</option>
                                 </select>
                             </div>
                             <div class="siimple-field">
@@ -46,7 +46,7 @@
                             </div>
                             <div class="siimple-field">
                                 <div class="siimple-btn siimple-btn--primary siimple-btn--fluid siimple--text-bold"
-                                    onclick="addLeaf()">
+                                    onclick="addLeafFromAdminPage()">
                                     Įtraukti į Eilę
                                 </div>
                             </div>
@@ -58,13 +58,18 @@
                 <div class="siimple-grid-col siimple-grid-col--6 siimple-grid-col--sm-12">
                     <div class="siimple-card align=" center">
                         <div class="siimple-card-header" align="center">
-                            <div class="siimple-h5 siimple--mb-0">Įtraukti Lapukus iš Kitur</div>
+                            <div class="siimple-h5 siimple--mb-0">localStorage</div>
                         </div>
                         <div class="siimple-card-body">
                             <div class="siimple-field">
                                 <div class="siimple-btn siimple-btn--primary siimple-btn--fluid siimple--text-bold"
-                                    id="saveToLocalStorage" onclick="init()">
-                                    Išsaugoti Pavyzdinius Duomenis
+                                    id="saveToLocalStorage" onclick="loadExampleData()">
+                                    Pridėti Pavyzdinius Duomenis
+                                </div>
+                            </div>
+                            <div class="simple-field" onclick="clearLocalStorage()">
+                                <div class="siimple-btn siimple-btn--primary siimple-btn--fluid siimple--text-bold">
+                                    Ištrinti Visą
                                 </div>
                             </div>
                         </div>
@@ -74,9 +79,8 @@
         </div>
 
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="resources/js/leaf.js"></script>
     <script src="resources/js/admin.js"></script>
-    <script src="resources/js/specialist.js"></script>
 </body>
 
 </html>
