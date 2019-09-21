@@ -2,6 +2,9 @@
 // Leaf class is able to serialize itself into localStorage
 class Leaf {
     constructor(specialist, name) {
+        // Exit if arguments are missing
+        if (specialist == null || name == null)
+            return;
         this.name = name;
         this.isCompleted = false;
         this.specialist = specialist;
