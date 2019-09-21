@@ -9,7 +9,7 @@ function addLeafFromAdminPage() {
 }
 
 function loadExampleData() {
-    var leaves = [new Leaf('odontologas', 'Audrius'), new Leaf('ginekologas', 'Urte')]
+    var leaves = [new Leaf('odontologas', 'Audrius'), new Leaf('ginekologas', 'Urte'), new Leaf('psichologas', 'Ignas'), new Leaf('pediatras', 'Jurga')]
     leaves.forEach(function (leaf) {
         leaf.pushToLocalStorage();
     })
@@ -18,4 +18,5 @@ function loadExampleData() {
 function clearLocalStorage() {
     console.log("localStorage cleared");
     localStorage.clear();
+    localStorage.setItem('number', 1);
 }

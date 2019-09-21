@@ -38,17 +38,17 @@ function formColumn(specialistName) {
 }
 
 function formColumnHeader(specialistName) {
-    return '<h1 align="center"><i>' + specialistName + '</i></h1>';
+    return '<h1 align="center">' + specialistName + '</h1>';
 }
 
 function formCard(number, clientName, isComplete) {
     var isComplete = isComplete ? 'Taip' : 'Ne';
     var template = '<div class="siimple-card"><div class="siimple-card-header" align="center">';
-    template += '<div class="siimple-h5 siimple--mb-0"></div></div>';
+    template += '<div class="siimple-h5 siimple--mb-0">&#127811;</div></div>';
     template += '<div class="siimple-card-body" align="center"><div class="siimple--mt-3 siimple--mb-4" align="center">';
     template = template + '<div class="siimple-h1">' + number.toString() + '</div></div>';
     template = template + '<div class="siimple-h4">' + clientName + '</div>';
-    template += '<div class="siimple-btn siimple-btn--success siimple-btn--fluid siimple-btn--big siimple--text-bold">12:35</div>';
+    template += '<div class="siimple-btn siimple-btn--grey siimple-btn--fluid siimple-btn--big siimple--text-bold">12:35</div>';
     template += '</div></div>';
     return template;
 };

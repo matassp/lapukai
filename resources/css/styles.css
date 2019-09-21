@@ -22,7 +22,6 @@
 #pediatras h1 {
     color: #ee675d;
 }
-.siimple-btn.siimple-btn--fluid {
-    background-color: #dde5ee;
-    color: #546778;
+h1 {
+    text-transform: capitalize;
 }

@@ -61,7 +61,7 @@ function formRow(number, clientName, isComplete) {
     template = template + '<div class="siimple-table-cell">' + number.toString() + '</div>';
     template = template + '<div class="siimple-table-cell">' + clientName + '</div>';
     template = template + '<div class="siimple-table-cell">' + isComplete + '</div>';
-    template = template + '<div class="siimple-table-cell">' + formButtonGroup(number) + '</div></div>';
+    template = template + '<div class="siimple-table-cell" align="center">' + formButtonGroup(number) + '</div></div>';
     return template;
 };
 
