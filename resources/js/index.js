@@ -23,7 +23,7 @@ function formColumn(specialistName) {
     var html = '';
 
     // If specialist has no leaves
-    if (leafArray == null) {
+    if (!leafArray || !leafArray.length) {
         html += formColumnHeader(specialistName);
         html += formEmptyMessage();
     }
