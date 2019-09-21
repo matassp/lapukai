@@ -25,7 +25,7 @@ function formTable(specialistName) {
     // If specialist has leaves
     else
         leafArray.forEach(leaf => {
-            html += formRowFromTemplate(leaf.number, leaf.name, leaf.isComplete);
+            html += formRowFromTemplate(leaf.number, leaf.name, leaf.isCompleted);
         });
 
     element.innerHTML += html;

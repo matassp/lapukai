@@ -32,6 +32,7 @@ class Leaf {
     }
 
     complete() {
+        console.log('completed')
         this.isCompleted = true;
     }
 
