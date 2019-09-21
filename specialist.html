@@ -21,7 +21,7 @@
     <div class="siimple-content siimple-content--large siimple--mt-5">
         <div class="siimple-field">
             <label class="siimple-label">Pasirinkti Specialistą: </label><br>
-            <select class="siimple-select siimple-select--fluid" onchange="switchSpecialist()" id="specialistSelection">
+            <select class="siimple-select siimple-select--fluid" onchange="reloadTable()" id="specialistSelection">
                 <option selected value="odontologas">Odontologas</option>
                 <option value="ginekologas">Ginekologas</option>
                 <option value="psichologas">Psichologas</option>
@@ -35,6 +35,7 @@
                     <div class="siimple-table-cell">Numeris</div>
                     <div class="siimple-table-cell">Vardas</div>
                     <div class="siimple-table-cell">Aptarnauta</div>
+                    <div class="siimple-table-cell">Veiksmai</div>
                 </div>
             </div>
             <div class="siimple-table-body" id="tableBody">
