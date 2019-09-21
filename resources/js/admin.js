@@ -9,6 +9,10 @@ function addLeafFromAdminPage() {
 }
 
 function loadExampleData() {
+    var number = localStorage.getItem('number');
+    if (number == null)
+        localStorage.setItem('number', 1);
+
     var leaves = [new Leaf('odontologas', 'Audrius'), new Leaf('ginekologas', 'Urte'), new Leaf('psichologas', 'Ignas'), new Leaf('pediatras', 'Jurga')]
     leaves.forEach(function (leaf) {
         leaf.pushToLocalStorage();

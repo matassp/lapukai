@@ -25,6 +25,7 @@ function formColumn(specialistName) {
     // If specialist has no leaves
     if (leafArray == null) {
         html += formColumnHeader(specialistName);
+        html += formEmptyMessage();
     }
     // If specialist has leaves
     else {
@@ -39,6 +40,11 @@ function formColumn(specialistName) {
 
 function formColumnHeader(specialistName) {
     return '<h1 align="center">' + specialistName + '</h1>';
+}
+
+function formEmptyMessage() {
+    html = '<div class="siimple-alert siimple-alert--primary" align="center">Eilė tuščia...</div>';
+    return html;
 }
 
 function formCard(number, clientName, isComplete, specialistName) {
