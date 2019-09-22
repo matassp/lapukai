@@ -1,4 +1,10 @@
 var localStorage = window.localStorage;
+window.onload = focusOnLeafCreation();
+
+function focusOnLeafCreation() {
+    console.log('focused')
+    document.getElementById("input").focus();
+}
 
 function addLeafFromAdminPage() {
     var specialist = document.getElementById("specialistSelection").value;
