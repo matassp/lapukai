@@ -53,3 +53,13 @@ function getIndexByNumber(specialistName, number) {
     console.log('Leaf with this number does not exist');
     return null;
 }
+
+function allLeavesCompleted(specialistName) {
+    var leafArray = getLeafArray(specialistName);
+    for (let index = 0; index < leafArray.length; index++) {
+        const leaf = leafArray[index];
+        if (!leaf.isCompleted)
+            return false;
+    }
+    return true;
+}

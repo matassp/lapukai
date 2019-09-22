@@ -23,10 +23,11 @@ function formColumn(specialistName) {
     var html = '';
 
     // If specialist has no leaves
-    if (!leafArray || !leafArray.length) {
+    if (!leafArray || !leafArray.length || allLeavesCompleted(specialistName)) {
         html += formColumnHeader(specialistName);
         html += formEmptyMessage();
     }
+
     // If specialist has leaves
     else {
         html += formColumnHeader(specialistName);
@@ -48,7 +49,8 @@ function formEmptyMessage() {
 }
 
 function formCard(number, clientName, isComplete, specialistName) {
-    var isComplete = isComplete ? 'Taip' : 'Ne';
+    if (isComplete)
+        return '';
     var index = getIndexByNumber(specialistName, number);
     var timeMessage = (index == 0) ? '<i>Aptarnaujama</i>' : "12:15";
     var template = '<div class="siimple-card"><div class="siimple-card-header" align="center">';
