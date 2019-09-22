@@ -2,7 +2,6 @@ var localStorage = window.localStorage;
 window.onload = focusOnLeafCreation();
 
 function focusOnLeafCreation() {
-    console.log('focused')
     document.getElementById("input").focus();
 }
 
@@ -24,7 +23,7 @@ function loadExampleData() {
     if (number == null)
         localStorage.setItem('number', 1);
 
-    fetchJSONFile('https://matassp.github.io/lapukai/resources/data/client-li.json', function (data) {
+    fetchJSONFile('https://matassp.github.io/lapukai/resources/data/client-list.json', function (data) {
         data.forEach(element => {
             var newLeaf = new Leaf(element.specialist, element.name);
             newLeaf.pushToLocalStorage();

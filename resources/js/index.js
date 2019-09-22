@@ -51,8 +51,8 @@ function formEmptyMessage() {
 function formCard(number, clientName, isComplete, specialistName) {
     if (isComplete)
         return '';
-    var index = getIndexByNumber(specialistName, number);
-    var timeMessage = (index == 0) ? '<i>Aptarnaujama</i>' : "12:15";
+    var firstNumber = getFirstNotCompletedLeaf(specialistName).number;
+    var timeMessage = (number == firstNumber) ? '<i>Aptarnaujama</i>' : "12:15";
     var template = '<div class="siimple-card"><div class="siimple-card-header" align="center">';
     template += '<div class="siimple-h5 siimple--mb-0">&#127811;</div></div>';
     template += '<div class="siimple-card-body" align="center"><div class="siimple--mt-3 siimple--mb-4" align="center">';

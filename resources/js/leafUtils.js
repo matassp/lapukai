@@ -54,6 +54,32 @@ function getIndexByNumber(specialistName, number) {
     return null;
 }
 
+function getFirstNotCompletedLeaf(specialistName) {
+    var leafArray = getLeafArray(specialistName);
+    for (let index = 0; index < leafArray.length; index++) {
+        const leaf = leafArray[index];
+        if (!leaf.isCompleted)
+            return leaf;
+    }
+    console.log('Leaf with this number does not exist');
+    return null;
+}
+
+function getLeafByNumber(number) {
+    const specialists = ['odontologas', 'ginekologas', 'psichologas', 'pediatras'];
+
+    for (let index = 0; index < specialists.length; index++) {
+        const specialistName = specialists[index];
+
+        var leafArray = getLeafArray(specialistName);
+        for (let index = 0; index < leafArray.length; index++) {
+            const leaf = leafArray[index];
+            if (leaf.number == number)
+                return leaf;
+        }
+    }
+}
+
 function allLeavesCompleted(specialistName) {
     var leafArray = getLeafArray(specialistName);
     for (let index = 0; index < leafArray.length; index++) {
