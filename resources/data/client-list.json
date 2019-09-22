@@ -1,22 +1,42 @@
 [
     {
         "specialist": "odontologas",
-        "name": "Marius",
-        "number": "001"
+        "name": "Marius"
     },
     {
         "specialist": "odontologas",
-        "name": "Antanas",
-        "number": "022"
+        "name": "Antanas"
     },
     {
         "specialist": "psichologas",
-        "name": "Ignas",
-        "number": "333"
+        "name": "Ignas"
     },
     {
-        "specialist": "Pediatras",
-        "name": "Jurgis",
-        "number": "100"
+        "specialist": "pediatras",
+        "name": "Jurgis"
+    },
+    {
+        "specialist": "ginekologas",
+        "name": "Urtė"
+    },
+    {
+        "specialist": "ginekologas",
+        "name": "Paulius"
+    },
+    {
+        "specialist": "pediatras",
+        "name": "Darius"
+    },
+    {
+        "specialist": "psichologas",
+        "name": "Martynas"
+    },
+    {
+        "specialist": "ginekologas",
+        "name": "Jonas"
+    },
+    {
+        "specialist": "pediatras",
+        "name": "Miglė"
     }
 ]
