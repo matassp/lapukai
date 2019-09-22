@@ -13,10 +13,26 @@ function loadExampleData() {
     if (number == null)
         localStorage.setItem('number', 1);
 
-    var leaves = [new Leaf('odontologas', 'Audrius'), new Leaf('ginekologas', 'Urte'), new Leaf('psichologas', 'Ignas'), new Leaf('pediatras', 'Jurga')]
-    leaves.forEach(function (leaf) {
-        leaf.pushToLocalStorage();
-    })
+    fetchJSONFile('https://matassp.github.io/lapukai/resources/data/client-list.json', function (data) {
+        data.forEach(element => {
+            var newLeaf = new Leaf(element.specialist, element.name);
+            newLeaf.pushToLocalStorage();
+        });
+    });
+}
+
+function fetchJSONFile(path, callback) {
+    var httpRequest = new XMLHttpRequest();
+    httpRequest.onreadystatechange = function () {
+        if (httpRequest.readyState === 4) {
+            if (httpRequest.status === 200) {
+                var data = JSON.parse(httpRequest.responseText);
+                if (callback) callback(data);
+            }
+        }
+    };
+    httpRequest.open('GET', path);
+    httpRequest.send();
 }
 
 function clearLocalStorage() {
