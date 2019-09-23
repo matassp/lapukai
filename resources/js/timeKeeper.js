@@ -2,7 +2,11 @@ class TimeKeeper {
     static addStartTime(leaf, startTime) {
         if (this.isNotInitialized(leaf))
             this.initLocalStorage(leaf);
-        var time = { number: leaf.number, start: startTime, end: -1 };
+        var time = {
+            number: leaf.number,
+            start: startTime,
+            end: -1
+        };
         const key = this.getKey(leaf);
         var times = JSON.parse(localStorage.getItem(key));
         times.push(time);

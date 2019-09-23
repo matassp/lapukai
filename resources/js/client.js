@@ -12,8 +12,7 @@ function getLeaf() {
         formLeaf(leaf);
         if (!leaf.isCompleted)
             updateTime();
-    }
-    else {
+    } else {
         element.innerHTML = '<h3 align="center">Lapukas nerastas...</h3>';
     }
 }

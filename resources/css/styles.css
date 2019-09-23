@@ -1,27 +1,36 @@
 #odontologas .siimple-card-header {
     background-color: #4e91e4;
 }
+
 #odontologas h1 {
     color: #4e91e4;
 }
+
 #ginekologas .siimple-card-header {
     background-color: #4acf7f;
 }
+
 #ginekologas h1 {
     color: #4acf7f;
 }
+
 #psichologas .siimple-card-header {
     background-color: #fbc850;
 }
+
 #psichologas h1 {
     color: #fbc850;
 }
+
 #pediatras .siimple-card-header {
     background-color: #ee675d;
 }
+
 #pediatras h1 {
     color: #ee675d;
 }
-h1, .siimple-h4 {
+
+h1,
+.siimple-h4 {
     text-transform: capitalize;
 }
