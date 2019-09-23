@@ -67,7 +67,6 @@ function formRow(number, clientName, isComplete) {
 
 function formButtonGroup(number) {
     var template = '<div class="siimple-btn-group">';
-    template += '<div class="siimple-btn siimple-btn--success" onclick="completeLeaf(' + number + ')">Aptarnauti</div>';
-    template += '<div class="siimple-btn siimple-btn--error" onclick="removeLeaf(' + number + ')">Ištrinti</div></div>';
+    template += '<div class="siimple-btn siimple-btn--success" onclick="completeLeaf(' + number + ')">Aptarnauti</div></div>';
     return template;
 }
