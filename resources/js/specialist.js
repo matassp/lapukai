@@ -66,7 +66,13 @@ function formRow(number, clientName, isComplete) {
 };
 
 function formButtonGroup(number) {
+    var specialistName = document.getElementById("specialistSelection").value;
+    var firstLeaf = getFirstNotCompletedLeaf(specialistName);
     var template = '<div class="siimple-btn-group">';
-    template += '<div class="siimple-btn siimple-btn--success" onclick="completeLeaf(' + number + ')">Aptarnauti</div></div>';
+    if (firstLeaf)
+        if (firstLeaf.number == number) {
+            return template += '<div class="siimple-btn siimple-btn--success" onclick="completeLeaf(' + number + ')">Aptarnauti</div></div>';
+        }
+    template += '<div class="siimple-btn siimple-btn--success siimple-btn--disabled">Aptarnauti</div></div>';
     return template;
 }
