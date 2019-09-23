@@ -105,7 +105,7 @@ function getEstTime(leaf) {
     var average = (elapsed / count) * multiplier;
     var diff = new Date(average);
     var mins = diff.getMinutes();
-    return mins;
+    return mins == 0 ? '<0' : mins;
 }
 
 function getLeafNumberInQueue(leaf) {
