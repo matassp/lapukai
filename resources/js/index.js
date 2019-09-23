@@ -32,7 +32,7 @@ function formColumn(specialistName) {
     else {
         html += formColumnHeader(specialistName);
         leafArray.forEach(leaf => {
-            html += formCard(leaf.number, leaf.name, leaf.isCompleted, specialistName);
+            html += formCard(leaf);
         });
     }
 
@@ -48,16 +48,16 @@ function formEmptyMessage() {
     return html;
 }
 
-function formCard(number, clientName, isComplete, specialistName) {
-    if (isComplete)
+function formCard(leaf) {
+    if (leaf.isCompleted)
         return '';
-    var firstNumber = getFirstNotCompletedLeaf(specialistName).number;
-    var timeMessage = (number == firstNumber) ? '<i>Aptarnaujama</i>' : "12:15";
+    var firstNumber = getFirstNotCompletedLeaf(leaf.specialist).number;
+    var timeMessage = (leaf.number == firstNumber) ? '<i>Aptarnaujama</i>' : getEstTime(leaf) + ' min';
     var template = '<div class="siimple-card"><div class="siimple-card-header" align="center">';
     template += '<div class="siimple-h5 siimple--mb-0">&#127811;</div></div>';
     template += '<div class="siimple-card-body" align="center"><div class="siimple--mt-3 siimple--mb-4" align="center">';
-    template = template + '<div class="siimple-h1">' + number.toString() + '</div></div>';
-    template = template + '<div class="siimple-h4">' + clientName + '</div>';
+    template = template + '<div class="siimple-h1">' + leaf.number.toString() + '</div></div>';
+    template = template + '<div class="siimple-h4">' + leaf.name + '</div>';
     template += '<div class="siimple-btn siimple-btn--grey siimple-btn--fluid siimple-btn--big siimple--text-bold">' + timeMessage + '</div>';
     template += '</div></div>';
     return template;

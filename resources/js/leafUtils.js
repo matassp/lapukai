@@ -89,3 +89,20 @@ function allLeavesCompleted(specialistName) {
     }
     return true;
 }
+
+function getEstTime(leaf) {
+    var times = JSON.parse(localStorage.getItem(leaf.specialist + 'Times'));
+    var count = 0;
+    var elapsed = 0;
+    for (let index = 0; index < times.length; index++) {
+        const time = times[index];
+        if (time.end != -1) {
+            elapsed = elapsed + (time.end - time.start);
+            count++;
+        }
+    }
+    var average = elapsed / count;
+    var diff = new Date(average);
+    var mins = diff.getMinutes();
+    return mins == 0 ? '<0' : mins;
+}
