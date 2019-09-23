@@ -101,8 +101,23 @@ function getEstTime(leaf) {
             count++;
         }
     }
-    var average = elapsed / count;
+    var multiplier = getLeafNumberInQueue(leaf);
+    var average = (elapsed / count) * multiplier;
     var diff = new Date(average);
     var mins = diff.getMinutes();
-    return mins == 0 ? '<0' : mins;
+    return mins;
+}
+
+function getLeafNumberInQueue(leaf) {
+    var number = 0;
+    var leafArray = getLeafArray(leaf.specialist);
+    for (let index = 0; index < leafArray.length; index++) {
+        const currentLeaf = leafArray[index];
+        if (currentLeaf.isCompleted)
+            continue;
+        if (currentLeaf.number == leaf.number)
+            return number;
+        number++;
+    }
+    return number;
 }
