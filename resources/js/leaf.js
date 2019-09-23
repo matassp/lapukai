@@ -32,6 +32,7 @@ class Leaf {
 
     complete() {
         this.isCompleted = true;
+        TimeKeeper.addEndTime(this, Date.now());
         console.log('completed');
     }
 

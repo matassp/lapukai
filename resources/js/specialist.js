@@ -35,6 +35,9 @@ function completeLeaf(number) {
     console.log(number);
     var specialistName = document.getElementById("specialistSelection").value;
     completeLeafByNumber(specialistName, number);
+    var firstLeaf = getFirstNotCompletedLeaf(specialistName);
+    if (firstLeaf != null)
+        TimeKeeper.addStartTime(firstLeaf, Date.now());
     reloadTable();
 }
 

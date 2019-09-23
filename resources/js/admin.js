@@ -15,6 +15,9 @@ function addLeafFromAdminPage() {
 
     var leaf = new Leaf(specialist, clientName);
     leaf.pushToLocalStorage();
+    var firstLeaf = getFirstNotCompletedLeaf(specialist);
+    if (firstLeaf.number == leaf.number)
+        TimeKeeper.addStartTime(leaf, Date.now());
     showMessage('Užregistruota sėkmingai...', true, 'createdMessage');
 }
 
@@ -27,6 +30,9 @@ function loadExampleData() {
         data.forEach(element => {
             var newLeaf = new Leaf(element.specialist, element.name);
             newLeaf.pushToLocalStorage();
+            var firstLeaf = getFirstNotCompletedLeaf(element.specialist);
+            if (firstLeaf.number == newLeaf.number)
+                TimeKeeper.addStartTime(newLeaf, Date.now());
         });
     });
 }
