@@ -19,8 +19,3 @@ Web aplikacija ligoninių (bankų, pašto skyrių ir t.t.) eilių sudarymui lank
 * Aplikacija pilnai viekia visuose ekrano dydžiuose (responsive).
 * Duomenys saugomi jūsų kompiuteryje, naudojant localStorage.
 * Pavyzdiniai duomenys laikomi JSON faile serveryje, paspaudus užkrovimo mygtuką jie užsaugomi jūsų kompiuteryje
-
-### Kontaktai
-
-* Matas Speičys
-* matasspeicys@gmail.com
